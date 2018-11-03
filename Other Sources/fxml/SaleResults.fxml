@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="posapplication.controller.SaleResultsController">
+   <children>
+      <AnchorPane layoutX="100.0" layoutY="32.0" maxHeight="500.0" maxWidth="700.0" minHeight="500.0" minWidth="700.0" prefHeight="500.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TableView fx:id="saleResultsTable" layoutX="14.0" layoutY="14.0" prefHeight="418.0" prefWidth="672.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+              <columns>
+                <TableColumn fx:id="saleBarcodeColumn" maxWidth="169.0" minWidth="169.0" prefWidth="169.0" resizable="false" text="Barcode" />
+                <TableColumn fx:id="saleProductNameColumn" maxWidth="169.0" minWidth="169.0" prefWidth="169.0" resizable="false" text="Product name" />
+                  <TableColumn fx:id="saleQuantityColumn" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" text="Quantity" />
+                  <TableColumn fx:id="salePriceColumn" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" text="Price" />
+                  <TableColumn fx:id="saleTotalPriceColumn" prefWidth="129.5999755859375" resizable="false" text="Total price" />
+              </columns>
+            </TableView>
+            <Label fx:id="saleTotalLabel" layoutX="14.0" layoutY="451.0" prefHeight="34.0" prefWidth="316.0" text="Total price :">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

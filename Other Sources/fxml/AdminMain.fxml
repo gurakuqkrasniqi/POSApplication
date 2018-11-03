@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="parentPane" minHeight="200.0" minWidth="-Infinity" prefHeight="1030.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="posapplication.controller.AdminMainController">
+   <children>
+      <Separator layoutX="491.0" layoutY="217.0" orientation="VERTICAL" prefHeight="1080.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
+    <AnchorPane fx:id="dashPane" layoutX="-6.0" layoutY="4.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1430.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Separator layoutY="57.0" prefWidth="200.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="57.0" />
+            <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="5.0" layoutX="175.0" layoutY="14.0" prefHeight="36.0" prefWidth="127.0" text="Dashboard" textAlignment="CENTER" textFill="#187eea">
+               <font>
+                  <Font name="Myanmar Text" size="22.0" />
+               </font>
+            </Label>
+            <VBox fx:id="dashVBoxh" layoutX="31.0" layoutY="59.0" prefHeight="1078.4" prefWidth="472.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="80.0">
+               <children>
+                  <HBox fx:id="userHBox" onMouseClicked="#usersClicked" onMouseEntered="#userMouseEnter" onMouseExited="#userMouseExit" prefHeight="90.0" prefWidth="360.0">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <ImageView fitHeight="70.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../resources/userIcon.png" />
+                           </image>
+                        </ImageView>
+                        <Label contentDisplay="CENTER" text=" Users " textFill="#187eea">
+                           <font>
+                              <Font name="Myanmar Text" size="24.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" top="20.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="furnisherHBox" layoutX="10.0" layoutY="20.0" onMouseClicked="#furnishersClicked" onMouseEntered="#furnishersMouseEnter" onMouseExited="#furnishersMouseExit" prefHeight="90.0" prefWidth="360.0">
+                     <children>
+                        <ImageView fitHeight="70.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../resources/supplierIcon.png" />
+                           </image>
+                        </ImageView>
+                        <Label contentDisplay="CENTER" prefHeight="58.0" prefWidth="125.0" text=" Furnishers" textFill="#187eea">
+                           <font>
+                              <Font name="Myanmar Text" size="24.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" top="20.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox fx:id="productHBox" layoutX="10.0" layoutY="131.0" onMouseClicked="#productsClicked" onMouseEntered="#productsMouseEnter" onMouseExited="#productsMouseExit" prefHeight="90.0" prefWidth="360.0">
+                     <children>
+                        <ImageView fitHeight="70.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../resources/products.png" />
+                           </image>
+                        </ImageView>
+                        <Label contentDisplay="CENTER" prefHeight="58.0" prefWidth="108.0" text=" Products" textFill="#187eea">
+                           <font>
+                              <Font name="Myanmar Text" size="24.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" top="20.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox fx:id="reportsHBox" layoutX="10.0" layoutY="241.0" onMouseClicked="#reportsClicked" onMouseEntered="#reportsMouseEnter" onMouseExited="#reportsMouseExit" prefHeight="90.0" prefWidth="360.0">
+                     <children>
+                        <ImageView fitHeight="70.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../resources/reports.png" />
+                           </image>
+                        </ImageView>
+                        <Label contentDisplay="CENTER" prefHeight="58.0" prefWidth="108.0" text=" Reports" textFill="#187eea">
+                           <font>
+                              <Font name="Myanmar Text" size="24.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" top="20.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox fx:id="logoutHBox" onMouseClicked="#logoutClicked" onMouseEntered="#logoutMouseEnter" onMouseExited="#logoutMouseExit" prefHeight="90.0" prefWidth="350.4">
+                     <children>
+                        <ImageView fitHeight="70.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../resources/logout.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="58.0" prefWidth="108.0" text=" Logout" textAlignment="CENTER" textFill="#187eea">
+                           <font>
+                              <Font name="Myanmar Text" size="24.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" right="10.0" top="20.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+    <AnchorPane fx:id="mainPane" layoutX="500.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1420.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="495.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Separator layoutX="75.0" layoutY="54.0" prefHeight="3.0" prefWidth="1270.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="57.0" />
+            <Label fx:id="welcomeLabel" layoutX="1149.0" layoutY="12.0" text=" Welcome, username " textFill="#187eea" AnchorPane.rightAnchor="76.0">
+               <font>
+                  <Font name="Myanmar Text Bold" size="21.0" />
+               </font>
+            </Label>
+            <AnchorPane fx:id="userPane" layoutX="75.0" layoutY="99.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="920.0" prefWidth="1280.0" AnchorPane.bottomAnchor="57.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="100.0">
+               <children>
+                  <TableView fx:id="usersTable" layoutX="206.0" layoutY="108.0" onMouseClicked="#rowClicked" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="idColumn" maxWidth="245.0" minWidth="220.0" prefWidth="220.0" resizable="false" text="ID" />
+                      <TableColumn fx:id="userColumn" maxWidth="220.0" minWidth="220.0" prefWidth="220.0" resizable="false" text="Username" />
+                        <TableColumn fx:id="passwordColumn" maxWidth="245.0" minWidth="220.0" prefWidth="220.0" resizable="false" text="Password" />
+                        <TableColumn fx:id="roleColumn" maxWidth="220.0" minWidth="220.0" prefWidth="220.0" resizable="false" text="Role" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     
+                  </TableView>
+                  <VBox layoutX="980.0" layoutY="41.0" prefHeight="347.0" prefWidth="200.0" AnchorPane.bottomAnchor="485.0" AnchorPane.leftAnchor="980.0" AnchorPane.rightAnchor="105.0" AnchorPane.topAnchor="41.0">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="80.0" text="ID" />
+                        <TextField fx:id="idField" />
+                        <Label layoutX="10.0" layoutY="10.0" prefHeight="18.0" prefWidth="80.0" text="Username" />
+                        <TextField fx:id="usernameField" layoutX="10.0" layoutY="28.0" />
+                        <Label layoutX="10.0" layoutY="10.0" prefHeight="18.0" prefWidth="80.0" text="Password" />
+                        <TextField fx:id="passwordField" />
+                        <Label layoutX="10.0" layoutY="98.0" prefHeight="18.0" prefWidth="80.0" text="Role" />
+                        <ComboBox fx:id="roleComboBox" prefWidth="150.0" />
+                        <Button fx:id="addUserButton" maxWidth="85.0" minWidth="85.0" mnemonicParsing="false" onAction="#addUserClicked" prefHeight="25.0" prefWidth="85.0" text="Add User">
+                           <VBox.margin>
+                              <Insets left="55.0" top="70.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="editUser" maxWidth="85.0" minWidth="85.0" mnemonicParsing="false" onAction="#editUser" prefHeight="25.0" prefWidth="85.0" text="Edit user">
+                           <VBox.margin>
+                              <Insets left="55.0" top="7.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="deleteUser" maxWidth="85.0" minWidth="85.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="25.0" prefWidth="85.0" text="Delete">
+                           <VBox.margin>
+                              <Insets left="55.0" top="7.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="furnisherPane" layoutX="80.0" layoutY="110.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="920.0" prefWidth="1280.0" visible="false" AnchorPane.bottomAnchor="57.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="100.0">
+               <children>
+                  <TableView fx:id="furnisherTable" layoutX="206.0" layoutY="108.0" onMouseClicked="#fRowClicked" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="0.0">
+                     <columns>
+                        <TableColumn fx:id="furnisherColumn" maxWidth="-Infinity" minWidth="293.3" prefWidth="293.3" resizable="false" text="Furshiner name" />
+                        <TableColumn fx:id="fiscalColumn" maxWidth="293.3" minWidth="293.3" prefWidth="293.3" resizable="false" text="Fiscal number" />
+                        <TableColumn fx:id="phoneColumn" maxWidth="293.3" minWidth="293.3" prefWidth="293.3" resizable="false" text="Phone number" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <VBox prefHeight="261.0" prefWidth="200.0" AnchorPane.bottomAnchor="571.0" AnchorPane.leftAnchor="980.0" AnchorPane.rightAnchor="105.0" AnchorPane.topAnchor="41.0">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="118.0" text="Furnisher name" />
+                        <TextField fx:id="furnisherField" />
+                        <Label layoutX="10.0" layoutY="10.0" prefHeight="18.0" prefWidth="111.0" text="Fiscal number" />
+                        <TextField fx:id="fiscalField" layoutX="10.0" layoutY="28.0" />
+                        <Label layoutX="10.0" layoutY="10.0" prefHeight="18.0" prefWidth="108.0" text="Phone number" />
+                        <TextField fx:id="phoneField" />
+                        <Button fx:id="addFurnisher" alignment="CENTER" maxWidth="127.0" minWidth="85.0" mnemonicParsing="false" onAction="#addFurnisherClicked" prefHeight="26.0" prefWidth="127.0" text="Add furnisher">
+                           <VBox.margin>
+                              <Insets left="36.5" top="30.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="editFurnisher" maxWidth="127.0" minWidth="85.0" mnemonicParsing="false" onAction="#editFurnisherClicked" prefHeight="26.0" prefWidth="127.0" text="Edit furnisher">
+                           <VBox.margin>
+                              <Insets left="36.5" top="7.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="deleteFurnisher" maxWidth="127.0" minWidth="85.0" mnemonicParsing="false" onAction="#deleteFurnisherClicked" prefHeight="26.0" prefWidth="127.0" text="Delete furnisher">
+                           <VBox.margin>
+                              <Insets left="36.5" top="7.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="productPane" layoutX="80.0" layoutY="110.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="920.0" prefWidth="1280.0" visible="false" AnchorPane.bottomAnchor="57.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="100.0">
+               <children>
+                  <TableView fx:id="productsTable" layoutX="206.0" layoutY="108.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#pRowClicked" prefWidth="962.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="322.6" AnchorPane.topAnchor="0.0">
+                     <columns>
+                        <TableColumn fx:id="barcodeColumn" maxWidth="170.0" minWidth="170.0" prefWidth="170.0" resizable="false" text="Barcode" />
+                        <TableColumn fx:id="productColumn" maxWidth="170.0" minWidth="170.0" prefWidth="170.0" resizable="false" text="Product name" />
+                        <TableColumn fx:id="saleColumn" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" resizable="false" text="Sale price" />
+                        <TableColumn fx:id="buyColumn" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" resizable="false" text="Buy price" />
+                        <TableColumn fx:id="stockColumn" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" resizable="false" text="Stock" />
+                        <TableColumn fx:id="fColumn" maxWidth="170.0" minWidth="170.0" prefWidth="170.0" resizable="false" text="Furnisher name" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <VBox layoutX="980.0" layoutY="41.0" prefHeight="429.0" prefWidth="200.0" AnchorPane.bottomAnchor="403.0" AnchorPane.leftAnchor="1025.0" AnchorPane.topAnchor="41.0">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="80.0" text="Barcode" />
+                        <TextField fx:id="barcodeField" />
+                        <Label layoutX="10.0" layoutY="10.0" prefHeight="18.0" prefWidth="131.0" text="Product name" />
+                        <TextField fx:id="productField" layoutX="10.0" layoutY="28.0" />
+                        <Label layoutX="10.0" layoutY="10.0" prefHeight="18.0" prefWidth="112.0" text="Sale price" />
+                        <TextField fx:id="saleField" />
+                        <Label layoutX="10.0" layoutY="98.0" prefHeight="18.0" prefWidth="95.0" text="Buy price" />
+                        <TextField fx:id="buyField" layoutX="10.0" layoutY="116.0" />
+                        <Label layoutX="10.0" layoutY="98.0" prefHeight="18.0" prefWidth="80.0" text="Stock" />
+                        <TextField fx:id="stockField" layoutX="10.0" layoutY="204.0" />
+                        <Label layoutX="10.0" layoutY="98.0" prefHeight="18.0" prefWidth="80.0" text="Furnisher " />
+                        <ComboBox fx:id="furnisherComboBox" prefHeight="26.0" prefWidth="150.0" />
+                        <Button fx:id="addProduct" maxWidth="127.0" minWidth="127.0" mnemonicParsing="false" onAction="#addProduct" prefHeight="26.0" prefWidth="127.0" text="Add product" textAlignment="CENTER">
+                           <VBox.margin>
+                              <Insets left="36.5" top="40.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="editProduct" maxWidth="127.0" minWidth="127.0" mnemonicParsing="false" onAction="#editProduct" prefHeight="26.0" prefWidth="127.0" text="Edit product">
+                           <VBox.margin>
+                              <Insets left="36.5" top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="deleteProduct" maxWidth="127.0" minWidth="127.0" mnemonicParsing="false" onAction="#deleteProduct" prefHeight="25.0" prefWidth="127.0" text="Delete product">
+                           <VBox.margin>
+                              <Insets left="36.5" top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="reportsPane" layoutX="80.0" layoutY="110.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="920.0" prefWidth="1280.0" visible="false" AnchorPane.bottomAnchor="57.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="100.0">
+               <children>
+                  <TableView fx:id="saleTable" onMouseClicked="#fRowClicked" prefHeight="873.0" prefWidth="1038.0" AnchorPane.leftAnchor="0.0">
+                     <columns>
+                        <TableColumn fx:id="saleIdColumn" maxWidth="207.0" minWidth="207.0" prefWidth="207.0" resizable="false" text="Sale ID" />
+                        <TableColumn fx:id="saleUserIdColumn" maxWidth="207.0" minWidth="207.0" prefWidth="207.0" resizable="false" text="Sale User ID" />
+                        <TableColumn fx:id="customerIdColumn" maxWidth="207.0" minWidth="207.0" prefWidth="207.0" resizable="false" text="Customer ID" />
+                        <TableColumn fx:id="timeOfSaleColumn" maxWidth="207.0" minWidth="207.0" prefWidth="207.0" resizable="false" text="Time of sale" />
+                        <TableColumn fx:id="totalPriceColumn" maxWidth="207.0" minWidth="207.0" prefWidth="207.0" resizable="false" text="Total price" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <VBox layoutX="1093.0" layoutY="36.0" prefHeight="70.0" prefWidth="131.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#showSaleReports" prefHeight="26.0" prefWidth="140.0" text="Sale reports" />
+                        <Button mnemonicParsing="false" onAction="#showBuyReports" prefHeight="26.0" prefWidth="136.0" text="Buy reports">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <TableView fx:id="buyTable" layoutX="585.0" layoutY="90.0" prefHeight="873.0" prefWidth="1038.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="buyIdColumn" prefWidth="167.2000732421875" resizable="false" text="Buy ID" />
+                      <TableColumn fx:id="buyUserIdColumn" prefWidth="168.0" resizable="false" text="Buy User ID" />
+                        <TableColumn fx:id="furnisherNameColumn" prefWidth="197.5999755859375" resizable="false" text="Furnisher name" />
+                        <TableColumn fx:id="timeOfBuyColumn" prefWidth="189.60009765625" resizable="false" text="Time of buy" />
+                        <TableColumn fx:id="totalBuyPriceColumn" prefWidth="152.7999267578125" resizable="false" text="Total price" />
+                        <TableColumn fx:id="paidColumn" prefWidth="157.5999755859375" resizable="false" text="Paid" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="saleResultsButton" layoutX="1093.0" layoutY="132.0" mnemonicParsing="false" onAction="#saleResults" prefHeight="26.0" prefWidth="131.0" text="View results" />
+                  <Button fx:id="buyResultsButton" layoutX="1093.0" layoutY="132.0" mnemonicParsing="false" onAction="#buyResults" prefHeight="26.0" prefWidth="131.0" text="View results" visible="false" />
+                  <Button fx:id="finishPayment" layoutX="1093.0" layoutY="169.0" mnemonicParsing="false" onAction="#updateIsPaid" prefHeight="26.0" prefWidth="131.0" text="Finish payment" visible="false" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

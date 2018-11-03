@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="posapplication.controller.BuyProductsController">
+   <children>
+      <TableView fx:id="buyTable" editable="true" layoutX="328.0" layoutY="76.0" prefHeight="442.0" prefWidth="729.0">
+        <columns>
+          <TableColumn fx:id="barcodeColumn" prefWidth="140.0" text="Barcode" />
+          <TableColumn fx:id="productColumn" prefWidth="159.0" text="Product Name" />
+            <TableColumn fx:id="qtyColumn" prefWidth="139.0" resizable="false" text="Quantity" />
+            <TableColumn fx:id="priceColumn" prefWidth="134.0" text="Price" />
+            <TableColumn fx:id="totalPriceColumn" prefWidth="156.0" text="Total Price" />
+        </columns>
+      </TableView>
+      <TextField fx:id="barcodeField" layoutX="328.0" layoutY="30.0" onKeyPressed="#barcodeFieldEnter" prefHeight="32.0" prefWidth="134.0" promptText="Barcode" />
+      <Button fx:id="buy_button" layoutX="519.0" layoutY="30.0" mnemonicParsing="false" onAction="#addBuyProd" prefHeight="31.0" prefWidth="112.0" text="Add product" />
+      <Button fx:id="finishBuy" layoutX="963.0" layoutY="542.0" mnemonicParsing="false" onAction="#finishBuy" prefHeight="31.0" prefWidth="94.0" text="Finish Buy" />
+      <TableView fx:id="lowStockTable" layoutX="38.0" layoutY="76.0" prefHeight="442.0" prefWidth="250.0">
+        <columns>
+          <TableColumn fx:id="lowProductNameColumn" prefWidth="145.60004043579102" text="Product name" />
+          <TableColumn fx:id="lowStockColumn" prefWidth="103.99992370605469" text="Stock" />
+        </columns>
+      </TableView>
+      <Button fx:id="addToBuyTable" layoutX="96.0" layoutY="545.0" mnemonicParsing="false" onAction="#addProductsToBuy" prefHeight="26.0" prefWidth="134.0" text="Add to table" />
+      <TextField fx:id="addQuantityField" alignment="CENTER" layoutX="944.0" layoutY="33.0" onKeyPressed="#quantityFieldEnter" onMouseClicked="#getProductQuantity" prefHeight="26.0" prefWidth="112.0" promptText="Enter quantity" />
+      <Button fx:id="deleteProduct" layoutX="787.0" layoutY="542.0" mnemonicParsing="false" onAction="#deleteProduct" prefHeight="31.0" prefWidth="134.0" text="Delete product" />
+      <Label alignment="CENTER" layoutX="38.0" layoutY="30.0" prefHeight="26.0" prefWidth="250.0" text="Products in low stock" textFill="#f50000">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="874.0" layoutY="33.0" prefHeight="26.0" prefWidth="69.0" text="Quantity: ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

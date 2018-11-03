@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="parentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1030.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="posapplication.controller.UserMainController">
+   <children>
+      <Separator layoutX="85.0" layoutY="67.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="14.0" prefWidth="1750.0" AnchorPane.leftAnchor="85.0" AnchorPane.rightAnchor="85.0" />
+      <Label alignment="CENTER" layoutX="590.9999999999999" layoutY="6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="62.0" prefWidth="737.0" text="&quot;Market name&quot; - Point of Sale" textFill="#187eea" AnchorPane.leftAnchor="590.9999999999999" AnchorPane.rightAnchor="591.4000000000001">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+      <TableView fx:id="saleTable" layoutX="85.0" layoutY="151.0" prefHeight="430.0" prefWidth="1202.0">
+        <columns>
+          <TableColumn fx:id="barcodeCol" editable="false" prefWidth="275.9999694824219" text="Barcode" />
+          <TableColumn fx:id="pNameCol" minWidth="0.0" prefWidth="290.4000244140625" text="Product name" />
+            <TableColumn fx:id="quantityCol" prefWidth="226.39996337890625" text="Quantity" />
+            <TableColumn fx:id="priceCol" prefWidth="200.79998779296875" text="Price" />
+            <TableColumn fx:id="totalPriceCol" prefWidth="206.3999267578124" text="Total price" />
+        </columns>
+      </TableView>
+      <AnchorPane fx:id="customerPane" layoutX="85.0" layoutY="626.0" prefHeight="335.0" prefWidth="613.0" style="-fx-border-color: #C0C0C0; -fx-background-color: add8e6;">
+         <children>
+            <TextField fx:id="customerIdField" layoutX="317.0" layoutY="98.0" onKeyPressed="#customerPoints" prefHeight="32.0" prefWidth="191.0" />
+            <TextField fx:id="firstNameField" editable="false" layoutX="317.0" layoutY="155.0" prefHeight="32.0" prefWidth="191.0" />
+            <TextField fx:id="lastNameField" editable="false" layoutX="317.0" layoutY="219.0" prefHeight="32.0" prefWidth="191.0" />
+            <Label layoutX="318.0" layoutY="68.0" prefHeight="30.0" prefWidth="131.0" text="Customer id">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="318.0" layoutY="128.0" prefHeight="30.0" prefWidth="131.0" text="First name">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="318.0" layoutY="191.0" prefHeight="30.0" prefWidth="131.0" text="Last name">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="42.0" layoutY="14.0" prefHeight="49.0" prefWidth="142.0" text="Customer">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="185.0" fitWidth="220.0" layoutX="42.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/customer.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="discountButton" layoutX="347.0" layoutY="269.0" mnemonicParsing="false" onAction="#loyaltyDiscount" prefHeight="32.0" prefWidth="131.0" text="Discount">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="barcodeField" layoutX="85.0" layoutY="101.0" onKeyPressed="#barcodeFieldEnter" prefHeight="32.0" prefWidth="182.0" promptText="Barcode" />
+      <Button fx:id="addSaleProduct" layoutX="332.0" layoutY="101.0" mnemonicParsing="false" onAction="#addSaleProd" prefHeight="32.0" prefWidth="120.0" text="Add product" />
+      <AnchorPane fx:id="infoPane" layoutX="1388.0" layoutY="151.0" prefHeight="430.0" prefWidth="485.0" AnchorPane.rightAnchor="85.0">
+         <children>
+            <Label layoutX="27.0" layoutY="31.0" prefHeight="59.0" prefWidth="386.0" text="Cashier : ">
+               <font>
+                  <Font name="System Bold" size="41.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="276.0" prefHeight="59.0" prefWidth="371.0" text="Time :">
+               <font>
+                  <Font name="System Bold" size="41.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="151.0" prefHeight="59.0" prefWidth="247.0" text="Date :">
+               <font>
+                  <Font name="System Bold" size="41.0" />
+               </font>
+            </Label>
+            <Label fx:id="usernameLabel" layoutX="27.0" layoutY="90.0" prefHeight="59.0" prefWidth="386.0" text="username">
+               <font>
+                  <Font size="41.0" />
+               </font>
+            </Label>
+            <Label fx:id="dateLabel" layoutX="27.0" layoutY="208.0" prefHeight="59.0" prefWidth="247.0" text="Date :">
+               <font>
+                  <Font size="41.0" />
+               </font>
+            </Label>
+            <Label fx:id="timeLabel" layoutX="27.0" layoutY="334.0" prefHeight="59.0" prefWidth="371.0" text="Time :">
+               <font>
+                  <Font size="41.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <VBox layoutX="1349.0" prefHeight="335.0" prefWidth="371.0" AnchorPane.bottomAnchor="69.0" AnchorPane.leftAnchor="1349.0" AnchorPane.rightAnchor="85.0" AnchorPane.topAnchor="626.0">
+         <children>
+            <HBox fx:id="newSaleHBox" onMouseClicked="#newSale" prefHeight="57.0" prefWidth="486.0">
+               <children>
+                  <ImageView fitHeight="55.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@../resources/refresh.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER_RIGHT" prefHeight="64.0" prefWidth="214.0" text="New sale" textAlignment="CENTER">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="220.0" right="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="manageCustomersHBox" layoutX="10.0" layoutY="10.0" onMouseClicked="#manageCustomers" prefHeight="57.0" prefWidth="486.0">
+               <children>
+                  <ImageView fitHeight="58.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@../resources/manageC.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER_RIGHT" prefHeight="56.0" prefWidth="321.0" text="Manage customers" textAlignment="CENTER">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="100.0" right="10.0" top="1.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="13.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="finishPaymentHBox" onMouseClicked="#finishPayment" prefHeight="57.0" prefWidth="486.0">
+               <children>
+                  <ImageView fitHeight="54.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@../resources/payment.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER_RIGHT" prefHeight="64.0" prefWidth="314.0" text="Finish payment" textAlignment="CENTER">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="145.0" right="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="13.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="discountHBox" layoutX="10.0" layoutY="159.0" onMouseClicked="#buyProducts" prefHeight="57.0" prefWidth="486.0">
+               <children>
+                  <ImageView fitHeight="56.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@../resources/discount.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER_RIGHT" prefHeight="64.0" prefWidth="253.0" text="Buy products" textAlignment="CENTER">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="170.0" right="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="13.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="logoutHBox" layoutX="10.0" layoutY="223.0" onMouseClicked="#logoutClicked" prefHeight="57.0" prefWidth="486.0">
+               <children>
+                  <ImageView fitHeight="56.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@../resources/logout.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER_RIGHT" prefHeight="64.0" prefWidth="314.0" text="Logout" textAlignment="CENTER">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="240.0" right="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="13.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="758.0" layoutY="626.0" prefHeight="335.0" prefWidth="528.0">
+         <children>
+            <Pane fx:id="paymentTitle" prefHeight="80.0" prefWidth="528.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="178.0" layoutY="15.0" prefHeight="46.0" prefWidth="154.0" text="Payment">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <AnchorPane fx:id="paymentPane" prefHeight="271.0" prefWidth="528.0">
+               <children>
+                  <Label layoutX="71.0" layoutY="40.0" prefHeight="30.0" prefWidth="114.0" text="Total price : ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="71.0" layoutY="98.0" prefHeight="30.0" prefWidth="114.0" text="Cash :">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="71.0" layoutY="159.0" prefHeight="30.0" prefWidth="114.0" text="Change : ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="totalPriceField" layoutX="228.0" layoutY="37.0" prefHeight="38.0" prefWidth="191.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="cashField" layoutX="228.0" layoutY="97.0" onKeyPressed="#paymentFinish" prefHeight="38.0" prefWidth="191.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="changeField" layoutX="228.0" layoutY="156.0" prefHeight="38.0" prefWidth="191.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <TextField fx:id="quantityField" layoutX="985.0" layoutY="105.0" onKeyPressed="#quantityFieldEnter" onMouseClicked="#getProductQuantity" prefHeight="32.0" prefWidth="120.0" promptText="Enter quantity" />
+      <Label layoutX="908.0" layoutY="108.0" prefHeight="26.0" prefWidth="69.0" text="Quantity:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Button fx:id="deleteButton" layoutX="1155.0" layoutY="105.0" mnemonicParsing="false" onAction="#deleteProduct" prefHeight="32.0" prefWidth="131.0" text="Delete product" />
+   </children>
+</AnchorPane>
